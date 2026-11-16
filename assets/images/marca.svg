@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Ônibus do NextBus">
+  <rect width="128" height="128" rx="32" fill="#0E5C4A"/>
+  <rect x="34" y="34" width="28" height="8" rx="4" fill="#E3A008"/>
+  <rect x="26" y="46" width="62" height="36" rx="8" fill="#F4EFE6"/>
+  <path d="M88 44h10a10 10 0 0 1 10 10v28a6 6 0 0 1-6 6H88V44z" fill="#F4EFE6"/>
+  <rect x="34" y="54" width="12" height="16" rx="2" fill="#E3A008"/>
+  <rect x="50" y="54" width="12" height="16" rx="2" fill="#E3A008"/>
+  <rect x="66" y="54" width="10" height="20" rx="2" fill="#E3A008"/>
+  <circle cx="100" cy="62" r="4" fill="#E3A008"/>
+  <circle cx="42" cy="90" r="10" fill="#0A3F34"/>
+  <circle cx="42" cy="90" r="4" fill="#E3A008"/>
+  <circle cx="90" cy="90" r="10" fill="#0A3F34"/>
+  <circle cx="90" cy="90" r="4" fill="#E3A008"/>
+</svg>
