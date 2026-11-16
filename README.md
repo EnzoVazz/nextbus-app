@@ -1,56 +1,35 @@
-# Welcome to your Expo app 👋
+# NextBus
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo da Global Solution para a disciplina de Mobile Application Development. O cidadão grava a linha, o ponto e o horário. O gestor vê as linhas sem GPS recente.
 
-## Get started
+A API fica em `https://nextbus-api.onrender.com`. Não há prefixo `/api`. A primeira chamada pode levar cerca de um minuto, porque o plano gratuito do Render dorme.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Como rodar
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+No celular, use o Expo Go. No computador, `npx expo start --web`.
 
-### Other setup steps
+## O que o app faz
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+- Entrar, criar conta e sair. A conta nova nasce como cidadão e não recebe token.
+- Cidadão: listar, criar, editar e apagar rotinas. O envio novo manda o cabeçalho `Idempotency-Key`.
+- Cidadão: aviso do dia e planejamento de viagem direta.
+- Cidadão e gestor: buscar linha, pontos perto, previsão e posição.
+- Gestor: linhas sem GPS recente.
+- Sobre: hash do commit usado na geração do app.
 
-## Learn more
+Uma rotina criada no celular aparece em `GET /rotinas`. O aviso novo não nasce no Render, porque a fila ficou no computador.
 
-To learn more about developing your project with Expo, look at the following resources:
+O app não guarda senha da Olho Vivo nem chave de inteligência artificial. No celular, o token fica no SecureStore. No navegador, ele fica no `localStorage`.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Integrantes
 
-## Join the community
+Turma 2TDSPF.
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Enzo Vaz — RM 561702
+- Lucas Ryuji Fukuda — RM 562152
+- Pietro Donela Salomão — RM 561722
