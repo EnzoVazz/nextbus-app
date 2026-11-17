@@ -59,13 +59,16 @@ export default function Perfil() {
       <Botao rotulo="Salvar nome" onPress={() => void salvarNome()} />
 
       <View style={[estilos.interruptor, { borderColor: cores.linha, backgroundColor: cores.cartao }]}>
-        <Texto variante="forte">{escuro ? 'Modo escuro ligado' : 'Modo escuro desligado'}</Texto>
+        <Texto variante="forte" style={estilos.rotulo}>
+          {escuro ? 'Modo escuro ligado' : 'Modo escuro desligado'}
+        </Texto>
         <Switch
           accessibilityLabel={escuro ? 'Desligar modo escuro' : 'Ligar modo escuro'}
           value={escuro}
           onValueChange={alternar}
           trackColor={{ false: cores.linha, true: cores.pinho }}
           thumbColor={cores.branco}
+          style={estilos.chave}
         />
       </View>
 
@@ -95,5 +98,12 @@ const estilos = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  rotulo: {
+    includeFontPadding: false,
+    textAlignVertical: 'center',
+  },
+  chave: {
+    transform: [{ translateY: 3 }],
   },
 });

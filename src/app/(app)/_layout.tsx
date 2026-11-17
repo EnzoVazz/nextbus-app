@@ -20,11 +20,11 @@ export default function LayoutApp() {
         headerShadowVisible: false,
         contentStyle: { backgroundColor: cores.papel },
       }}>
-      <Stack.Screen name="(abas)" options={{ headerShown: false }} />
+      <Stack.Screen name="(abas)" options={{ headerShown: false, title: 'Início' }} />
       <Stack.Screen name="rotina/nova" options={{ title: 'Nova rotina' }} />
       <Stack.Screen name="rotina/[id]" options={{ title: 'Editar rotina' }} />
       <Stack.Screen name="sobre" options={{ title: 'Sobre o app' }} />
-      <Stack.Screen name="perfil" options={{ title: 'Perfil' }} />
+      <Stack.Screen name="perfil" options={{ title: 'Perfil', headerBackTitle: 'Início' }} />
     </Stack>
   );
 }
