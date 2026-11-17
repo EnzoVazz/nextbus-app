@@ -1,6 +1,10 @@
 const { execSync } = require('node:child_process');
 
 function commitAtual() {
+  const remoto = process.env.EAS_BUILD_GIT_COMMIT_HASH;
+  if (remoto) {
+    return remoto.slice(0, 7);
+  }
   try {
     return execSync('git rev-parse --short HEAD', {
       encoding: 'utf8',
